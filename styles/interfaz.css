@@ -1,0 +1,115 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../res/img/interface_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.barra-titulo{
+    width: 100%;
+    background-color: #006105;
+    transform: translate(0,0);
+    display: inline-flex;
+}
+
+.titulo{
+    font-size: 2.2em;
+    font-family: 'Verdana', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    transform: translate(35vh,0);
+}
+
+.subtitulo{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif;
+    color: #000000;
+}
+
+img.logo-barra{
+    width: auto;
+    height: 75px;
+    margin: 15px;
+}
+
+.valor-monitor{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Verdana', sans-serif;
+    color: #000000;
+}
+
+.layout-monitores{
+    left: 50%;
+    transform: translate(-40%,0);
+    position:static;
+}
+
+.layout-1-2{
+    left: 50%;
+    top: 50%;
+    transform: translate(100%,-180%);
+    display: inline-flex;
+    position: fixed;
+}
+
+.layout-3-4{
+    left: 50%;
+    top: 50%;
+    transform: translate(100%,-70%);
+    display: inline-flex;
+    position: fixed;
+}
+
+.monitor-izq{
+    width: 250px;
+    height: 180px;
+    background-color: #ffffffb0;
+    border-radius: 15px;
+}
+
+.monitor-der{
+    margin-left: 1em;
+    width: 250px;
+    height: 180px;
+    background-color: #ffffffb0;
+    border-radius: 15px;
+}
+
+.monitor-fecha{
+    top: 50%;
+    left: 50%;
+    transform: translate(50%,25%);
+    margin-left: 1em;
+    width: 350px;
+    height: 180px;
+    background-color: #ffffffb0;
+    border-radius: 15px;
+}
+
+.monitor-alarma{
+    top: 50%;
+    left: 50%;
+    transform: translate(50%,25%);
+    margin-left: 1em;
+    width: 350px;
+    height: 130px;
+    background-color: #ffffffb0;
+    border-radius: 15px;
+}
+
+.link-logout{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.link-logout:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

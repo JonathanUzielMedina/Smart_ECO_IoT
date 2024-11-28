@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" content="text/html">
+    <title>Iniciar Sesión | Smart ECO</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <script type="text/javascript" src="scripts/login.js"></script>
+</head>
+
+<body>
+    <div class="barra-titulo">
+        <img class="logo-barra" src="res/img/se_logo_w.png">
+    </div>
+    <div class="layout-login">
+        <p class="titulo">Iniciar Sesión</p>
+        <div class="box-inputs">
+            <div class="input-login">
+                <p class="texto">Usuario: </p>
+                <input id="u-input" class="input" type="text" style="margin-left: 52px; transform: translate(0,-5px);">
+            </div>
+            <div class="input-login">
+                <p class="texto">Contraseña: </p>
+                <input id="p-input" class="input" type="password" style="margin-left: 15px; transform: translate(0,-5px);">
+            </div>
+        </div>
+        <input type="button" class="button-login" value="Acceder" onclick="acceder()">
+        <p id="mensaje" class="mensaje"></p>
+    </div>
+</body>
+
+</html>

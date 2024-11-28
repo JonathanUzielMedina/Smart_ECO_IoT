@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" content="text/html">
+        <title>Interfaz de Invernadero Smart ECO</title>
+        <link rel="stylesheet" href="styles/interfaz.css">
+        <script type="text/javascript" src="scripts/interfaz.js"></script>
+    </head>
+    <body>
+        <div class="barra-titulo"> 
+            <img class="logo-barra" src="res/img/se_logo_w.png">
+            <p class="titulo">Mi Invernadero</p>
+            <a id="logout" onclick="logout()" class="link-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" fill="currentColor"
+                    class="bi bi-box-arrow-right"viewBox="0 0 16 16" style="color: #ffffff;
+                                                                            transform: translate(515px,2px);">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>
+                <p class="titulo" style="font-size: 1.5em;
+                                        transform: translate(570px,-103px);">
+                    Cerrar Sesión
+                </p>
+            </a>
+        </div>
+        <div></div>
+        <div class="monitor-fecha">
+            <p class="subtitulo">Fecha:</p>
+            <p id="valor-fecha" class="valor-monitor">Cargando...</p>
+        </div>
+        <div id="monitor-alarma" class="monitor-alarma">
+            <p class="subtitulo">Estatus de Alarma</p>
+            <p id="valor-alarma" class="valor-monitor">Cargando...</p>
+        </div>
+        <div class="layout-monitores">
+            <div class="layout-1-2">
+                <div class="monitor-izq">
+                    <p class="subtitulo">Temperatura</p>
+                    <p id="valor-temperatura" class="valor-monitor">Cargando...</p>
+                </div>
+                <div class="monitor-der">
+                    <p class="subtitulo">Humedad</p>
+                    <p id="valor-humedad" class="valor-monitor">Cargando...</p>
+                </div>
+            </div>
+            <div class="layout-3-4">
+                <div class="monitor-izq">
+                    <p class="subtitulo">Luz</p>
+                    <p id="valor-luz" class="valor-monitor">Cargando...</p>
+                </div>
+                <div class="monitor-der">
+                    <p class="subtitulo">Altura</p>
+                    <p id="valor-altura" class="valor-monitor">Cargando...</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+    <script type = "text/javascript">
+        let fecha = document.getElementById("valor-fecha");
+        
+        function fechaActual(){
+            const fechaTexto = new Date();
+            fecha.innerHTML = fechaTexto;
+        }
+
+        function logout(){
+            window.location.replace("index.html");
+        }
+        
+        setInterval(fechaActual,100);        
+    </script>
+</html>
