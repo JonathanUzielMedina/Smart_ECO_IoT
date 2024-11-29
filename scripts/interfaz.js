@@ -9,8 +9,8 @@ webSocket.onmessage = function(evento){
     var luz = datos.light;                                  // Porcentaje de luz.
     var altura = datos.distance;                            // Porcentaje de luz.
     var estatusAlarma = datos.alarm;                        // Porcentaje de luz.
-    var sonidoAlarma = new Audio('../res/audio/alarm.mp3'); // Instanciar el sonido de la alarma.
-    sonidoAlarma.load();
+    var sonidoAlarma = new Audio('./res/audio/alarm.mp3'); // Instanciar el sonido de la alarma.
+    sonidoAlarma.play();
 
     // Mostrar los datos en la página.
     document.getElementById("valor-temperatura").innerHTML = temperatura + " °C";
