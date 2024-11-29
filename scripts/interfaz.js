@@ -1,4 +1,4 @@
-let sonido = new Audio("res/audio/alarm.mp3");
+let sonido = new Audio("./res/audio/alarm.mp3");
 sonido.play();
 
 // Instanciar una conexión mediante Web Socket.
