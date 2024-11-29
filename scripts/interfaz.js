@@ -1,3 +1,4 @@
+
 // Instanciar una conexión mediante Web Socket.
 var webSocket = new WebSocket('ws://localhost:1880/data'); // Crear el websocket.
 
@@ -30,7 +31,7 @@ webSocket.onmessage = function(evento){
     // Si la alarma está activada, ésta suena en la página, cambia el estatus a "Activada" y el monitor cambia de color.
     else {
         document.getElementById("valor-alarma").innerHTML = "Activada";
-        document.getElementById("monitor-alarma").style.backgroundColor = "#ff7171b0;
+        document.getElementById("monitor-alarma").style.backgroundColor = "#ff7171b0";
         sonar = true;
         if (sonar == true){
             sonidoAlarma.play();
