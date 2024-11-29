@@ -1,3 +1,6 @@
+let sonido = new Audio("res/audio/alarm.mp3");
+sonido.play();
+
 // Instanciar una conexión mediante Web Socket.
 var webSocket = new WebSocket('ws://localhost:1880/data'); // Crear el websocket.
 
