@@ -22,14 +22,11 @@ webSocket.onmessage = function(evento){
     if (estatusAlarma == 0){
         document.getElementById("valor-alarma").innerHTML = "Desactivada";
         document.getElementById("monitor-alarma").style.backgroundColor = "#ffffffb0";
-        sonidoAlarma.pause();
-        sonidoAlarma.load();
     }
     // Si la alarma está activada, ésta suena en la página, cambia el estatus a "Activada" y el monitor cambia de color.
     else {
         document.getElementById("valor-alarma").innerHTML = "Activada";
         document.getElementById("monitor-alarma").style.backgroundColor = "#ff7171b0";
-        sonidoAlarma.loop();
     }
 };
 
