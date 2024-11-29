@@ -10,6 +10,7 @@ webSocket.onmessage = function(evento){
     var altura = datos.distance;                            // Porcentaje de luz.
     var estatusAlarma = datos.alarm;                        // Porcentaje de luz.
     var sonidoAlarma = new Audio('../res/audio/alarm.mp3'); // Instanciar el sonido de la alarma.
+    sonidoAlarma.load();
 
     // Mostrar los datos en la página.
     document.getElementById("valor-temperatura").innerHTML = temperatura + " °C";
@@ -28,9 +29,7 @@ webSocket.onmessage = function(evento){
     else {
         document.getElementById("valor-alarma").innerHTML = "Activada";
         document.getElementById("monitor-alarma").style.backgroundColor = "#ff7171b0";
-        sonidoAlarma.load();
-        sonidoAlarma.play();
-        setInterval(sonidoAlarma.play(), 3000);
+        sonidoAlarma.loop();
     }
 };
 
