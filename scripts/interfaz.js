@@ -3,13 +3,13 @@ var webSocket = new WebSocket('ws://localhost:1880/data'); // Crear el websocket
 
 // Mandar datos a la página mientras esté conectada por Web Socket.
 webSocket.onmessage = function(evento){
-    var datos = JSON.parse(evento.data);                    // Procesar los datos de JSON.
-    var temperatura = datos.temperature;                    // Dato de temperatura.
-    var humedad = datos.humidity;                           // Porcentaje de humedad.
-    var luz = datos.light;                                  // Porcentaje de luz.
-    var altura = datos.distance;                            // Porcentaje de luz.
-    var estatusAlarma = datos.alarm;                        // Porcentaje de luz.
-    var sonidoAlarma = new Audio('./res/audio/alarm.mp3'); // Instanciar el sonido de la alarma.
+    var datos = JSON.parse(evento.data);                        // Procesar los datos de JSON.
+    var temperatura = datos.temperature;                        // Dato de temperatura.
+    var humedad = datos.humidity;                               // Porcentaje de humedad.
+    var luz = datos.light;                                      // Porcentaje de luz.
+    var altura = datos.distance;                                // Porcentaje de luz.
+    var estatusAlarma = datos.alarm;                            // Porcentaje de luz.
+    let sonidoAlarma = document.getElementById("audio-alarma"); // Instanciar el sonido de la alarma.
 
     // Mostrar los datos en la página.
     document.getElementById("valor-temperatura").innerHTML = temperatura + " °C";
@@ -21,11 +21,13 @@ webSocket.onmessage = function(evento){
     if (estatusAlarma == 0){
         document.getElementById("valor-alarma").innerHTML = "Desactivada";
         document.getElementById("monitor-alarma").style.backgroundColor = "#ffffffb0";
+        sonidoAlarma.pause();
     }
     // Si la alarma está activada, ésta suena en la página, cambia el estatus a "Activada" y el monitor cambia de color.
     else {
         document.getElementById("valor-alarma").innerHTML = "Activada";
         document.getElementById("monitor-alarma").style.backgroundColor = "#ff7171b0";
+        sonidoAlarma.play();
     }
 };
 
