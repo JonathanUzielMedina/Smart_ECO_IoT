@@ -31,7 +31,6 @@ webSocket.onmessage = function(evento){
         sonidoAlarma.load();
         sonidoAlarma.play();
         setInterval(sonidoAlarma.play(), 3000);
-        sonidoAlarma.pause();
     }
 };
 
