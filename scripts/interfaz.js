@@ -28,7 +28,8 @@ webSocket.onmessage = function(evento){
         document.getElementById("valor-alarma").innerHTML = "Activada";
         document.getElementById("monitor-alarma").style.backgroundColor = "#ff7171b0";
         sonidoAlarma.play();
-        setInterval(sonidoAlarma.play(), 1000);
+        setInterval(sonidoAlarma.play(), 3000);
+        sonidoAlarma.pause();
     }
 };
 
