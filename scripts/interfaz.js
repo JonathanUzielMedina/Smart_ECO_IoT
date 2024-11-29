@@ -1,5 +1,5 @@
 // Instanciar una conexión mediante Web Socket.
-var webSocket = new WebSocket('ws://localhost:1883/data'); // Crear el websocket.
+var webSocket = new WebSocket('ws://localhost:1880/data'); // Crear el websocket.
 
 // Mandar datos a la página mientras esté conectada por Web Socket.
 webSocket.onmessage = function(evento){
